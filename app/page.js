@@ -8,10 +8,19 @@ export default function HomePage() {
       <div className="home-layout">
         
         <div className="side-containers left-side">
-          <div className="side-container"><img src="" alt="" /></div>
-          <div className="side-container"><img src="" alt="" /></div>
-          <div className="side-container"><img src="" alt="" /></div>
-          <div className="side-container menu-icon-box"><img src="" alt="" /></div>
+          <div className="side-container">
+            {/* Placeholder empty image box */}
+            <div className="empty-image-box"></div>
+          </div>
+          <div className="side-container">
+            <div className="empty-image-box"></div>
+          </div>
+          <div className="side-container">
+            <div className="empty-image-box"></div>
+          </div>
+          <div className="side-container menu-icon-box">
+            <div className="empty-image-box"></div>
+          </div>
         </div>
 
         <div className="main-logo-container">
@@ -24,13 +33,32 @@ export default function HomePage() {
         </div>
 
         <div className="side-containers right-side">
-          <div className="side-container"><img src="" alt="" /></div>
-          <div className="side-container"><img src="" alt="" /></div>
-          <div className="side-container"><img src="" alt="" /></div>
-          <div className="side-container"><img src="" alt="" /></div>
+          <div className="side-container">
+            <div className="empty-image-box"></div>
+          </div>
+          <div className="side-container">
+            <div className="empty-image-box"></div>
+          </div>
+          <div className="side-container">
+            <div className="empty-image-box"></div>
+          </div>
+          <div className="side-container">
+            <div className="empty-image-box"></div>
+          </div>
         </div>
 
       </div>
+
+      <style jsx>{`
+        .empty-image-box {
+          width: 100%;
+          height: 100%;
+          background-color: #3a3a3a;
+          border-radius: 12px;
+          border: 2px dashed #555;
+        }
+      `}</style>
+      
     </>
   );
 }
