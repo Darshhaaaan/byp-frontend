@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { getProducts, placeOrder } from "@/lib/api";
 import { useRouter } from "next/navigation";
 import Navbar from "../../components/Navbar";
@@ -12,11 +12,7 @@ function ProductDetailContent({ params }) {
   const [msg, setMsg] = useState("");
   const router = useRouter();
 
-useEffect(() => {
-  loadProduct();
-}, [loadProduct]);
-
-  const loadProduct = async () => {
+  const loadProduct = useCallback(async () => {
     try {
       const res = await getProducts();
       const foundProduct = res.data.find(p => p._id === params.id);
@@ -27,7 +23,12 @@ useEffect(() => {
     } catch (err) {
       console.error("Error loading product:", err);
     }
-  };
+  }, [params.id]);
+
+  // 2. Call loadProduct inside useEffect (with loadProduct as dependency)
+  useEffect(() => {
+    loadProduct();
+  }, [loadProduct]);
 
   const handleVariantClick = (variant) => {
     setSelectedVariant(variant);
