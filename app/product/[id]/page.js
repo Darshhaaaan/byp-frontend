@@ -12,9 +12,9 @@ function ProductDetailContent({ params }) {
   const [msg, setMsg] = useState("");
   const router = useRouter();
 
-  useEffect(() => {
-    loadProduct();
-  }, []);
+useEffect(() => {
+  loadProduct();
+}, [loadProduct]);
 
   const loadProduct = async () => {
     try {
