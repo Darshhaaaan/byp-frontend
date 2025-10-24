@@ -25,7 +25,6 @@ function ProductDetailContent({ params }) {
     }
   }, [params.id]);
 
-  // 2. Call loadProduct inside useEffect (with loadProduct as dependency)
   useEffect(() => {
     loadProduct();
   }, [loadProduct]);
