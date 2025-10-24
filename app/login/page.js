@@ -40,7 +40,7 @@ export default function LoginPage() {
           <button type="submit">Login</button>
         </form>
         <div className="message">
-          Don't have an account? <Link href="/register" style={{ color: "#4af" }}>Register</Link>
+          Dont have an account? <Link href="/register" style={{ color: "#4af" }}>Register</Link>
         </div>
         {msg && <div className={`message ${msg.includes("success") ? "success" : "error"}`}>{msg}</div>}
       </div>
