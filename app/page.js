@@ -8,23 +8,6 @@ export default function HomePage() {
     <>
       <Navbar />
       <div className="home-layout">
-        
-        <div className="side-containers left-side">
-          <div className="side-container">
-            {/* Placeholder empty image box */}
-            <div className="empty-image-box"></div>
-          </div>
-          <div className="side-container">
-            <div className="empty-image-box"></div>
-          </div>
-          <div className="side-container">
-            <div className="empty-image-box"></div>
-          </div>
-          <div className="side-container menu-icon-box">
-            <div className="empty-image-box"></div>
-          </div>
-        </div>
-
         <div className="main-logo-container">
           Example E-commerce site
         </div>
