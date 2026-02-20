@@ -26,30 +26,9 @@ export default function HomePage() {
         </div>
 
         <div className="main-logo-container">
-          <div className="logo-image-wrapper">
-            <Image src="/images/logo.png" alt="Logo" width={200} height={200} className="main-logo-img" />
-          </div>
-          <a href="https://discord.gg/yourlink" target="_blank" rel="noopener noreferrer" className="discord-button">
-            Join Discord
-          </a>
+          Example E-commerce site
         </div>
-
-        <div className="side-containers right-side">
-          <div className="side-container">
-            <div className="empty-image-box"></div>
-          </div>
-          <div className="side-container">
-            <div className="empty-image-box"></div>
-          </div>
-          <div className="side-container">
-            <div className="empty-image-box"></div>
-          </div>
-          <div className="side-container">
-            <div className="empty-image-box"></div>
-          </div>
-        </div>
-
-      </div>
+    </div>
 
       <style jsx>{`
         .empty-image-box {
