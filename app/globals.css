@@ -716,3 +716,956 @@ body {
     min-width: unset;
   }
 }
+
+/* =========================================
+   BYTHEPOUND - MIDNIGHT HARVEST DESIGN
+========================================= */
+
+.byp-home {
+  --byp-green: #193B30;
+  --byp-deep: #102D27;
+  --byp-dark: #0B1915;
+  --byp-copper: #B66B43;
+  --byp-orange: #D98545;
+  --byp-tomato: #914A35;
+  --byp-peach: #E6BFA0;
+  --byp-cream: #E9D8B8;
+  --byp-silver: #AEB4B1;
+
+  background: var(--byp-dark);
+  color: var(--byp-cream);
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+
+.byp-home .navbar {
+  background: var(--byp-deep);
+  border-bottom: 1px solid rgba(174, 180, 177, 0.16);
+  padding: 20px 6%;
+}
+
+.byp-home .navbar-left {
+  color: var(--byp-cream);
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.byp-home .nav-link {
+  color: var(--byp-cream);
+  transition: color 0.3s ease;
+}
+
+.byp-home .nav-link:hover {
+  color: var(--byp-orange);
+}
+
+/* HERO SECTION */
+
+.byp-hero {
+  min-height: 720px;
+  padding: 100px 8% 35px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 50px;
+
+  background:
+    radial-gradient(
+      ellipse at 85% 45%,
+      rgba(182, 107, 67, 0.13),
+      transparent 42%
+    ),
+    linear-gradient(
+      135deg,
+      var(--byp-deep),
+      var(--byp-dark)
+    );
+}
+
+/* SUBTLE BACKGROUND DETAIL */
+
+.byp-hero::before {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border: 1px solid rgba(174, 180, 177, 0.08);
+  border-radius: 50%;
+  right: -150px;
+  top: 80px;
+  pointer-events: none;
+}
+
+/* HERO CONTENT */
+
+.byp-hero-content {
+  position: relative;
+  z-index: 2;
+  animation: bypFadeUp 1s ease both;
+}
+
+.byp-eyebrow {
+  color: var(--byp-orange);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 28px;
+}
+
+.byp-hero-content h1 {
+  font-size: clamp(44px, 6vw, 82px);
+  line-height: 1.05;
+  letter-spacing: -4px;
+  font-weight: 800;
+  color: var(--byp-cream);
+  margin: 0;
+}
+
+.byp-hero-content h1 span {
+  color: var(--byp-peach);
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.byp-description {
+  max-width: 420px;
+  color: var(--byp-silver);
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 30px 0;
+}
+
+/* SHOP BUTTON */
+
+.byp-shop-button {
+  display: inline-block;
+  padding: 17px 27px;
+  background: var(--byp-copper);
+  color: #fff8ed;
+  text-decoration: none;
+  border: 1px solid var(--byp-copper);
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all 0.35s ease;
+}
+
+.byp-shop-button:hover {
+  background: var(--byp-orange);
+  border-color: var(--byp-orange);
+  color: var(--byp-dark);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(217, 133, 69, 0.2);
+}
+
+/* HERO IMAGE AREA */
+
+.byp-hero-image {
+  min-height: 470px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bypFadeIn 1.3s ease both;
+}
+
+.byp-image-placeholder {
+  width: 100%;
+  height: 470px;
+  border-radius: 48% 48% 5px 5px;
+
+  background:
+    radial-gradient(
+      circle at 35% 35%,
+      #D98545 0 11%,
+      transparent 12%
+    ),
+    radial-gradient(
+      circle at 68% 30%,
+      #914A35 0 13%,
+      transparent 14%
+    ),
+    radial-gradient(
+      circle at 55% 62%,
+      #75876D 0 19%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 27% 75%,
+      #B66B43 0 15%,
+      transparent 16%
+    ),
+    linear-gradient(
+      145deg,
+      #355448,
+      #172C24
+    );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 35px;
+  text-align: center;
+  color: var(--byp-cream);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(230, 191, 160, 0.2);
+}
+
+.byp-image-placeholder::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 1px solid rgba(233, 216, 184, 0.35);
+  border-radius: 50%;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.byp-image-placeholder span {
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: 800;
+  position: relative;
+  color: var(--byp-orange);
+}
+
+.byp-image-placeholder p {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  line-height: 1.3;
+  position: relative;
+  color: var(--byp-cream);
+}
+
+/* HERO FOOTER */
+
+.byp-hero-footer {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(174, 180, 177, 0.25);
+  padding-top: 20px;
+  margin-top: 35px;
+  color: var(--byp-silver);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+/* ANIMATIONS */
+
+@keyframes bypFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bypFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+  .byp-hero {
+    grid-template-columns: 1fr;
+    padding: 75px 6% 25px;
+    gap: 25px;
+  }
+
+  .byp-hero-content h1 {
+    font-size: clamp(42px, 11vw, 64px);
+    letter-spacing: -2px;
+  }
+
+  .byp-hero-image {
+    min-height: 350px;
+  }
+
+  .byp-image-placeholder {
+    height: 350px;
+  }
+
+  .byp-hero-footer {
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 8px;
+  }
+}
+/* BYTHEPOUND LOGO */
+
+.byp-home .navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.byp-home .navbar-brand img {
+  width: 160px;
+  height: 55px;
+  object-fit: contain;
+  object-position: left center;
+  transition: transform 0.3s ease;
+}
+
+.byp-home .navbar-brand:hover img {
+  transform: scale(1.04);
+}
+
+@media (max-width: 768px) {
+
+ .byp-home .navbar-brand img {
+  width: 220px;
+  height: 75px;
+  object-fit: contain;
+  object-position: left center;
+  transition: transform 0.3s ease;
+}
+.byp-home .navbar-brand:hover img {
+  transform: scale(1.04);
+}
+
+@media (max-width: 768px) {
+  .byp-home .navbar-brand img {
+    width: 175px;
+    height: 60px;
+  }
+}
+}
+
+/* BYTHEPOUND - PRODUCT SHOWCASE */
+
+.byp-showcase {
+  padding: 110px 8%;
+  background: #0B1915;
+  color: #E9D8B8;
+}
+
+.byp-showcase-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 55px;
+}
+
+.byp-showcase-heading h2 {
+  font-size: clamp(38px, 5vw, 65px);
+  line-height: 1.05;
+  margin: 15px 0 0;
+  letter-spacing: -2px;
+}
+
+.byp-showcase-heading h2 span {
+  color: #D98545;
+  font-style: italic;
+}
+
+.byp-showcase-description {
+  max-width: 300px;
+  color: #AEB4B1;
+  line-height: 1.8;
+}
+
+.byp-product-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.byp-product-card {
+  text-decoration: none;
+  color: #E9D8B8;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.byp-product-card:hover {
+  transform: translateY(-8px);
+}
+
+.byp-product-featured {
+  margin-top: 35px;
+}
+
+.byp-product-art {
+  min-height: 320px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.byp-product-art > span {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.byp-art-one {
+  background: radial-gradient(circle at 50% 45%, #D98545, #914A35 65%, #562F25);
+}
+
+.byp-art-two {
+  background: radial-gradient(circle at 50% 45%, #E6BFA0, #A76C4C 65%, #593A30);
+}
+
+.byp-art-three {
+  background: radial-gradient(circle at 50% 45%, #71876A, #193B30 65%, #102D27);
+}
+
+.byp-art-circle {
+  width: 190px;
+  height: 190px;
+  border: 1px solid rgba(255,255,255,0.65);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 1.3;
+  transform: rotate(-10deg);
+  transition: transform 0.5s ease;
+}
+
+.byp-product-card:hover .byp-art-circle {
+  transform: rotate(0deg) scale(1.08);
+}
+
+.byp-product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(233,216,184,0.2);
+}
+
+.byp-product-info h3 {
+  margin: 0 0 7px;
+  font-size: 19px;
+}
+
+.byp-product-info p {
+  margin: 0;
+  color: #AEB4B1;
+  font-size: 13px;
+}
+
+.byp-product-info > span {
+  color: #D98545;
+  font-size: 23px;
+}
+
+.byp-showcase-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 55px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(233,216,184,0.2);
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.byp-showcase-footer a {
+  color: #D98545;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .byp-showcase {
+    padding: 75px 6%;
+  }
+
+  .byp-showcase-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .byp-product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .byp-product-featured {
+    margin-top: 0;
+  }
+
+  .byp-product-art {
+    min-height: 280px;
+  }
+
+  .byp-showcase-footer {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+/* BYTHEPOUND - BRAND STORY */
+
+.byp-story {
+  padding: 120px 8% 45px;
+  background: #193B30;
+  color: #E9D8B8;
+  position: relative;
+}
+
+.byp-story-top {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 80px;
+  align-items: center;
+  padding-bottom: 90px;
+}
+
+.byp-story-heading h2 {
+  font-size: clamp(42px, 5.5vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -3px;
+  margin: 18px 0 0;
+}
+
+.byp-story-heading h2 span {
+  color: #D98545;
+  font-style: italic;
+}
+
+.byp-story-copy {
+  max-width: 390px;
+}
+
+.byp-story-copy p {
+  color: #D0D1C5;
+  line-height: 1.9;
+  font-size: 15px;
+  margin-bottom: 22px;
+}
+
+.byp-story-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #E6BFA0;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  border-bottom: 1px solid #B66B43;
+  padding-bottom: 9px;
+  transition: color 0.3s ease;
+}
+
+.byp-story-link:hover {
+  color: #D98545;
+}
+
+.byp-story-divider {
+  height: 1px;
+  background: rgba(233,216,184,0.25);
+}
+
+.byp-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  padding: 65px 0 85px;
+}
+
+.byp-benefit {
+  position: relative;
+  padding-top: 15px;
+}
+
+.byp-benefit-number {
+  color: #AEB4B1;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.byp-benefit-icon {
+  font-size: 35px;
+  color: #D98545;
+  margin: 25px 0;
+  transition: transform 0.3s ease;
+}
+
+.byp-benefit:hover .byp-benefit-icon {
+  transform: translateY(-6px) rotate(12deg);
+}
+
+.byp-benefit h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.byp-benefit p {
+  color: #AEB4B1;
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 280px;
+}
+
+.byp-story-bottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(233,216,184,0.25);
+  padding-top: 22px;
+  color: #AEB4B1;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .byp-story {
+    padding: 80px 6% 35px;
+  }
+
+  .byp-story-top {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-bottom: 55px;
+  }
+
+  .byp-story-heading h2 {
+    letter-spacing: -2px;
+  }
+
+  .byp-benefits {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 45px 0 55px;
+  }
+
+  .byp-benefit-icon {
+    margin: 15px 0;
+  }
+
+  .byp-story-bottom {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* BYTHEPOUND - FOOTER */
+
+.byp-footer {
+  background: #0B1915;
+  color: #E9D8B8;
+  padding: 75px 8% 25px;
+  border-top: 1px solid rgba(233,216,184,0.15);
+}
+
+.byp-footer-main {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 45px;
+  padding-bottom: 70px;
+}
+
+.byp-footer-brand img {
+  width: 190px;
+  height: 70px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.byp-footer-brand p {
+  color: #E6BFA0;
+  font-size: 14px;
+  margin: 12px 0 8px;
+}
+
+.byp-footer-brand > span {
+  color: #AEB4B1;
+  font-size: 12px;
+}
+
+.byp-footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.byp-footer-column h4 {
+  color: #D98545;
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin: 10px 0 8px;
+}
+
+.byp-footer-column a {
+  color: #AEB4B1;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.3s ease;
+}
+
+.byp-footer-column a:hover {
+  color: #E9D8B8;
+}
+
+.byp-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(233,216,184,0.2);
+  color: #AEB4B1;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.byp-footer-bottom a {
+  color: #D98545;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .byp-footer {
+    padding: 55px 6% 25px;
+  }
+
+  .byp-footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 25px;
+  }
+
+  .byp-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .byp-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .byp-footer-main {
+    grid-template-columns: 1fr;
+  }
+
+  .byp-footer-brand {
+    grid-column: auto;
+  }
+}
+/* PRODUCT SHOWCASE - REAL IMAGES */
+
+.byp-product-art {
+  isolation: isolate;
+}
+
+.byp-product-art img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  transition: transform 0.6s ease;
+}
+
+.byp-product-card:hover .byp-product-art img {
+  transform: scale(1.07);
+}
+
+.byp-product-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 25, 21, 0.28);
+  z-index: -1;
+}
+
+.byp-product-art > span {
+  z-index: 1;
+  color: #fff;
+}
+
+.byp-art-circle {
+  z-index: 1;
+  color: #fff;
+  background: rgba(11, 25, 21, 0.12);
+}
+
+/* BYTHEPOUND - SCROLL REVEAL ANIMATIONS */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+[data-reveal].byp-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered product card animations */
+
+.byp-product-card:nth-child(2) {
+  transition-delay: 0.12s;
+}
+
+.byp-product-card:nth-child(3) {
+  transition-delay: 0.24s;
+}
+
+/* Staggered benefit animations */
+
+.byp-benefit:nth-child(2) {
+  transition-delay: 0.12s;
+}
+
+.byp-benefit:nth-child(3) {
+  transition-delay: 0.24s;
+}
+
+/* Accessibility: respect reduced motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+/* HERO PHOTO UPGRADE */
+
+.byp-hero-photo {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  overflow: hidden;
+  border-radius: 4px;
+  isolation: isolate;
+  background: #193B30;
+}
+
+.byp-hero-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+  z-index: -2;
+}
+
+.byp-hero-photo:hover img {
+  transform: scale(1.06);
+}
+
+.byp-hero-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 25, 21, 0.05) 30%,
+    rgba(11, 25, 21, 0.75) 100%
+  );
+  z-index: -1;
+}
+
+.byp-hero-photo-label {
+  position: absolute;
+  bottom: 38px;
+  left: 35px;
+  color: #E9D8B8;
+}
+
+.byp-hero-photo-label span {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #E6BFA0;
+}
+
+.byp-hero-photo-label p {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  line-height: 1.2;
+  margin-top: 12px;
+}
+
+.byp-hero-photo-stamp {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 85px;
+  height: 85px;
+  border: 1px solid rgba(233, 216, 184, 0.8);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #E9D8B8;
+  font-size: 9px;
+  letter-spacing: 2px;
+  gap: 3px;
+  background: rgba(11, 25, 21, 0.25);
+  backdrop-filter: blur(5px);
+}
+
+.byp-hero-photo-stamp span:nth-child(2) {
+  font-size: 19px;
+  color: #D98545;
+}
+
+/* MOBILE HERO PHOTO */
+
+@media (max-width: 768px) {
+  .byp-hero-photo {
+    height: 380px;
+  }
+
+  .byp-hero-photo-label {
+    left: 22px;
+    bottom: 25px;
+  }
+
+  .byp-hero-photo-label p {
+    font-size: 26px;
+  }
+
+  .byp-hero-photo-stamp {
+    width: 70px;
+    height: 70px;
+    top: 18px;
+    right: 18px;
+  }
+}

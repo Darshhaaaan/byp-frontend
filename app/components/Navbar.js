@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
@@ -32,7 +33,15 @@ export default function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <div className="navbar-left">ByThePound</div>
+        <Link href="/" className="navbar-brand">
+  <Image
+    src="/images/logo.png"
+    alt="ByThePound"
+    width={180}
+    height={60}
+    priority
+  />
+</Link>
         
         <button className="mobile-menu-toggle" onClick={() => setShowMobileMenu(!showMobileMenu)}>
           <span></span>
